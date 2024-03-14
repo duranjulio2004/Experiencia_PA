@@ -1,8 +1,21 @@
+import random
+
 def adivinar_par_o_impar():
-    """
-    Esta función representa el juego de adivinar si un número es par o impar.
-    Tienes que permitir que el usuario ingrese una de las dos opciones y
-    generar un número aleatorio para ver si es par o impar.
-    Se debe mostrar si el usuario adivina correctamente o no.
-    """
+
+    numero = random.randint(0,2)
+    print("Elije par o impar")
+    acierto = input()
+
+    if numero == 1:
+        correcto = "impar"
+    else:
+        correcto = "par"
+
+    while True:
+        if acierto == correcto:
+            print("Acertaste!")
+            break
+        else:
+            print("Te equivocaste")
+            break
     pass
