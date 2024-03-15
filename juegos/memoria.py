@@ -1,8 +1,21 @@
+import random
+
 def memoria():
-    """
-    Esta función representa el juego de memoria.
-    Debes generar una secuencia de números al azar y mostrarla al usuario.
-    Luego, debes pedir al usuario que repita la secuencia.
-    Se debe mostrar un mensaje si el usuario acierta o no.
-    """
-    pass
+    
+	cant_num = random.randint(10,20)
+	final = ""
+	for i in range(cant_num):
+		nuevo = random.randint(1,1000)
+		print(nuevo)
+		final = final + str(nuevo) + " "
+	
+	final = final[:-1]
+	print("Ahora escribe los numeros dictados separados por un espacio")
+	intento = input(str())
+
+	if intento == final:
+		print("CORRECTO!!")
+	else:
+		print("TE EQUIVOCASTE")
+	
+	pass
